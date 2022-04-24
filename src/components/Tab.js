@@ -21,9 +21,9 @@ const Tab = () => {
                         <span>{tabName}</span>
                     </div>
                 </>))}
-            <div className="absolute w-[60vw] h-1 max-w-[600px] top-full bg-gray-200">
-                <div className={
-                    `absolute ${tab === 0 ? "left-0" : (tab === 1 ? "left-1/3" : "left-2/3")} w-1/3 h-1 bg-teal-500 rounded-full transition-all`
+            <div style={{ width: `${20 * tabs.length}vw` }} className="absolute h-1 max-w-[600px] top-full bg-gray-200">
+                <div style={{ left: `${100 * tab / tabs.length}%`, width: `${100 * 1 / tabs.length}%` }} className={
+                    "absolute h-1 bg-teal-500 rounded-full transition-all"
                 } />
             </div>
         </div>
