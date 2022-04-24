@@ -10,7 +10,7 @@ const Tab = () => {
     }
 
     return (
-        <div className="Tab relative flex">
+        <div className="Tab relative max-w-[600px] flex">
             {tabs.map((tabName, index) => (
                 <>
                     <div onClick={() => changeTab(index)}
@@ -21,7 +21,7 @@ const Tab = () => {
                         <span>{tabName}</span>
                     </div>
                 </>))}
-            <div className="absolute w-[60vw] h-1 top-full bg-gray-200">
+            <div className="absolute w-[60vw] h-1 max-w-[600px] top-full bg-gray-200">
                 <div className={
                     `absolute ${tab === 0 ? "left-0" : (tab === 1 ? "left-1/3" : "left-2/3")} w-1/3 h-1 bg-teal-500 rounded-full transition-all`
                 } />

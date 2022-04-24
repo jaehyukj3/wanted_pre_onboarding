@@ -27,7 +27,7 @@ const Input = () => {
         }
     }
     return (
-        <dib className='input flex-row space-y-8'>
+        <div className='input flex-row max-w-[400px] space-y-8'>
             <div className='email'>
                 <span className='text-sm py-2 pl-2 pr-3'>E-mail</span>
                 <div className='relative'>
@@ -47,7 +47,7 @@ const Input = () => {
                 </div>
             </div>
 
-        </dib>
+        </div>
     )
 }
 
