@@ -1,0 +1,58 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/constants/levels';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/position';
+
+.input {
+  position: relative;
+  max-width: 400px;
+  margin-top: 2rem;
+  flex-direction: row;
+
+  .title {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.5rem 0.75rem 0.5rem 0.5rem 0.75rem;
+  }
+
+  .inputWrapper {
+    position: relative;
+  }
+
+  Input {
+    display: block;
+    background: colors.$WHITE;
+    width: 30vw;
+    height: full;
+    border: 1px;
+    border-color: rgb(241 245 249);
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem 0.5rem 0.5rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+    &:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      border-color: rgb(107 114 128);
+    }
+  }
+
+  .iconWrapper {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+
+  .checkIcon {
+    width: 23px;
+    height: 23px;
+    transition-property: color;
+    transition-duration: 0.2s;
+  }
+
+  .visibleIcon {
+    width: 23px;
+    height: 23px;
+  }
+}

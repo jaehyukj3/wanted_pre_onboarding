@@ -1,22 +1,20 @@
-import "./App.css";
-import Toggle from "./components/Toggle";
-import Tab from "./components/Tab";
-import Input from "./components/Input";
+import { LogoImage } from './assets/svgs'
+import './App.scss'
 
 function App() {
   return (
-    <div>
-      <div className="h-[20rem] flex justify-center items-center">
-        <Toggle />
-      </div>
-      <div className="h-[20rem] flex justify-center items-center">
-        <Tab />
-      </div>
-      <div className="h-[20rem] flex justify-center items-center">
-        <Input />
-      </div>
+    <div className='app'>
+      <header className='appHeader'>
+        <LogoImage className='appLogo' alt='logo' />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a className='appLink' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
+          Learn React
+        </a>
+      </header>
     </div>
   )
 }
 
-export default App;
+export default App
