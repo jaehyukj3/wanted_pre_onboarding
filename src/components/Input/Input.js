@@ -28,26 +28,28 @@ function Input() {
   }
   return (
     <div className={styles.input}>
-      <div className={styles.email}>
-        <span className={styles.title}>E-mail</span>
-        <div className={styles.inputWrapper}>
-          <input type='text' onChange={checkValidEmail} placeholder='E-mail' />
-          <span className={styles.iconWrapper}>
-            <AiFillCheckCircle color={isValidEmail ? '#14b8a6' : '#000000'} className={styles.checkIcon} />
-          </span>
+      <div>
+        <div className={styles.email}>
+          <span className={styles.title}>E-mail</span>
+          <div className={styles.inputWrapper}>
+            <input type='text' onChange={checkValidEmail} placeholder='E-mail' />
+            <span className={styles.iconWrapper}>
+              <AiFillCheckCircle color={isValidEmail ? '#14b8a6' : '#000000'} className={styles.checkIcon} />
+            </span>
+          </div>
         </div>
-      </div>
-      <div className='password'>
-        <span className={styles.title}>Password</span>
-        <div className={styles.inputWrapper}>
-          <input type={passwordType.type} placeholder='Password' />
-          <button type='button' className={styles.iconWrapper} onClick={changePasswordType}>
-            {passwordType.visible ? (
-              <ImEye color='#14b8a6' className={styles.visibleIcon} />
-            ) : (
-              <ImEyeBlocked className={styles.visibleIcon} />
-            )}
-          </button>
+        <div className='password'>
+          <span className={styles.title}>Password</span>
+          <div className={styles.inputWrapper}>
+            <input type={passwordType.type} placeholder='Password' />
+            <button type='button' className={styles.iconWrapper} onClick={changePasswordType}>
+              {passwordType.visible ? (
+                <ImEye color='#14b8a6' className={styles.visibleIcon} />
+              ) : (
+                <ImEyeBlocked className={styles.visibleIcon} />
+              )}
+            </button>
+          </div>
         </div>
       </div>
     </div>

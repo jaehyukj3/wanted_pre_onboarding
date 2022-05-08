@@ -1,0 +1,38 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/constants/levels';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/position';
+
+.toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 40vw;
+  max-width: 400px;
+  height: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #e5e7eb;
+  border-radius: 30%;
+
+  .active {
+    z-index: 10;
+    opacity: 1;
+  }
+
+  .deactive {
+    z-index: 10;
+    opacity: 0.5;
+  }
+
+  .slider {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: colors.$WHITE;
+    border: 2px solid #e5e7eb;
+    border-radius: 100px;
+    transition-duration: 150ms;
+  }
+}

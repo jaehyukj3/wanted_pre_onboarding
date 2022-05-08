@@ -5,44 +5,45 @@
 
 .tab {
   position: relative;
-  max-width: 600px;
   display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: colors.$WHITE;
+  border-radius: 3px;
 
   .active {
-    width: 20vw;
-    height: 40px;
-    background-color: white;
-    justify-content: space-around;
     display: flex;
     align-items: center;
-    opacity: 100%;
+    justify-content: space-around;
+    width: 20vw;
+    height: 40px;
+    opacity: 1;
   }
 
   .deactive {
-    width: 20vw;
-    height: 40px;
-    background-color: white;
-    justify-content: space-around;
     display: flex;
     align-items: center;
-    opacity: 50%;
+    justify-content: space-around;
+    width: 20vw;
+    height: 40px;
+    opacity: 0.5;
   }
 
   .sliderWrapper {
     position: absolute;
-    height: 0.25rem;
-    max-width: 600px;
     top: 100%;
-    background-color: #e5e7eb;
+    max-width: 600px;
+    height: 0.25rem;
+    background-color: colors.$GRAYD;
   }
 
   .slider {
     position: absolute;
     height: 0.25rem;
     background-color: #14b8a6;
-    border-radius: 30%;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
+    border-radius: 100px;
+    transition-duration: 0.2s;
   }
 }
