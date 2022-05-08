@@ -1,0 +1,48 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/constants/levels';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/position';
+
+.tab {
+  position: relative;
+  max-width: 600px;
+  display: flex;
+
+  .active {
+    width: 20vw;
+    height: 40px;
+    background-color: white;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    opacity: 100%;
+  }
+
+  .deactive {
+    width: 20vw;
+    height: 40px;
+    background-color: white;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    opacity: 50%;
+  }
+
+  .sliderWrapper {
+    position: absolute;
+    height: 0.25rem;
+    max-width: 600px;
+    top: 100%;
+    background-color: #e5e7eb;
+  }
+
+  .slider {
+    position: absolute;
+    height: 0.25rem;
+    background-color: #14b8a6;
+    border-radius: 30%;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}

@@ -5,7 +5,7 @@
 
 .input {
   position: relative;
-  max-width: 400px;
+  width: 400px;
   margin-top: 2rem;
   flex-direction: row;
 
@@ -19,10 +19,10 @@
     position: relative;
   }
 
-  Input {
+  input {
     display: block;
     background: colors.$WHITE;
-    width: 30vw;
+    width: 300px;
     height: full;
     border: 1px;
     border-color: rgb(241 245 249);
@@ -39,7 +39,7 @@
 
   .iconWrapper {
     position: absolute;
-    right: 0.5rem;
+    right: 120px;
     bottom: 50%;
     transform: translateY(50%);
   }

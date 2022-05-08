@@ -1,36 +1,34 @@
-// import { useState } from 'react'
+import { useState } from 'react'
+import styles from './Tab.module.scss'
 
-// const tabs = ['감자', '고구마', '카레라이스']
+const TABS = ['감자', '고구마', '카레라이스']
 
-// function Tab() {
-//   const [tab, setTab] = useState(0)
+function Tab() {
+  const [tab, setTab] = useState(0)
 
-//   const changeTab = (index) => {
-//     setTab(() => index)
-//   }
+  const changeTab = (index) => {
+    setTab(() => index)
+  }
 
-//   return (
-//     <div className='Tab relative max-w-[600px] flex'>
-//       {tabs.map((tabName, index) => (
-//         <div
-//           onClick={() => changeTab(index)}
-//           className={
-//             tab === index
-//               ? 'flex items-center w-[20vw] h-[40px] bg-white justify-around opacity-100'
-//               : 'flex items-center w-[20vw] h-[40px] bg-white justify-around opacity-50'
-//           }
-//         >
-//           <span>{tabName}</span>
-//         </div>
-//       ))}
-//       <div style={{ width: `${20 * tabs.length}vw` }} className='absolute h-1 max-w-[600px] top-full bg-gray-200'>
-//         <div
-//           style={{ left: `${(100 * tab) / tabs.length}%`, width: `${(100 * 1) / tabs.length}%` }}
-//           className='absolute h-1 bg-teal-500 rounded-full transition-all'
-//         />
-//       </div>
-//     </div>
-//   )
-// }
+  return (
+    <div className={styles.tab}>
+      {TABS.map((tabName, index) => (
+        <div
+          role='presentation'
+          onClick={() => changeTab(index)}
+          className={tab === index ? styles.active : styles.deactive}
+        >
+          <span>{tabName}</span>
+        </div>
+      ))}
+      <div className={styles.sliderWrapper} style={{ width: `${20 * TABS.length}vw` }}>
+        <div
+          style={{ left: `${(100 * tab) / TABS.length}%`, width: `${(100 * 1) / TABS.length}%` }}
+          className={styles.slider}
+        />
+      </div>
+    </div>
+  )
+}
 
-// export default Tab
+export default Tab
