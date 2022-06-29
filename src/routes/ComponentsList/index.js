@@ -1,6 +1,6 @@
-import Toggle from '../../components/toggle/Toggle'
-import Tab from '../../components/tab/Tab'
-import Input from '../../components/input/Input'
+import Toggle from '../../components/Toggle'
+import Tab from '../../components/Tab'
+import Input from '../../components/Input'
 import styles from './componentsList.module.scss'
 
 function ComponentsList() {

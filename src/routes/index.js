@@ -1,5 +1,5 @@
 import styles from './Routes.module.scss'
-import ComponentsList from './componentsList'
+import ComponentsList from './ComponentsList'
 
 function App() {
   return (
